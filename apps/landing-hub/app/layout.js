@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Premium hub for all tools',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
       <head>
