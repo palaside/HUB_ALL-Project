@@ -1,89 +1,93 @@
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import Head from "next/head";
+import { useState } from "react";
 
-// Mock app data – replace URLs with real ones later
+// Application definitions – update URLs as needed
 const apps = [
-  { id: 'report', name: 'รายงานรอง', url: 'https://example.com/report' },
-  { id: 'digital-evidence', name: 'DIGITAL EVIDENCE', url: 'https://example.com/digital-evidence' },
-  { id: 'ai-engineering', name: 'ai-engineering-implementation-stack', url: 'https://example.com/ai-engineering' },
-  { id: 'prompt-architect', name: 'Prompt Architect 360', url: 'https://example.com/prompt-architect' },
-  { id: 'pos', name: 'POS', url: 'https://example.com/pos' },
-  { id: 'design', name: 'Design', url: 'https://example.com/design' },
-  { id: 'herhyness', name: 'Herhyness', url: 'https://example.com/herhyness' },
+  { id: "arty", name: "ARTY", url: "https://example.com/arty" },
+  { id: "digital-evidence", name: "DIGITAL EVIDENCE", url: "https://example.com/digital-evidence" },
+  { id: "ai-engineering", name: "ai-engineering-implementation-stack", url: "https://example.com/ai-engineering" },
+  { id: "prompt-architect", name: "Prompt Architect 360", url: "https://example.com/prompt-architect" },
+  { id: "pos", name: "POS", url: "https://example.com/pos" },
+  { id: "design", name: "Design", url: "https://example.com/design" },
+  { id: "herhyness", name: "Herhyness", url: "https://example.com/herhyness" },
 ];
 
 export default function LandingHub() {
-  const [credentials, setCredentials] = useState({});
-
-  // Load any stored passwords from localStorage (mock persistence)
-  useEffect(() => {
-    const stored = {};
-    apps.forEach(app => {
-      const pwd = localStorage.getItem(`crg-admin:${app.id}`);
-      if (pwd) stored[app.id] = pwd;
-    });
-    setCredentials(stored);
-  }, []);
+  const [artyModalOpen, setArtyModalOpen] = useState(false);
+  const [artyPassword, setArtyPassword] = useState("");
 
   const handleAppClick = (app) => {
-    // If a credential exists for this app, require password
-    if (credentials[app.id]) {
-      const entered = prompt(`Enter password to access ${app.name}:`);
-      if (entered !== credentials[app.id]) {
-        alert('Incorrect password – access denied');
-        return;
-      }
+    if (app.id === "arty") {
+      setArtyModalOpen(true);
+      return;
     }
-    // Navigate to the app URL (opens in new tab)
-    window.open(app.url, '_blank');
+    window.open(app.url, "_blank");
+  };
+
+  const handleArtySubmit = (e) => {
+    e.preventDefault();
+    console.log("Entered ARTY password:", artyPassword);
+    setArtyModalOpen(false);
+    setArtyPassword("");
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen antialiased">
-      {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-br from-gray-800 to-gray-950">
-        <div className="absolute inset-0 opacity-30">
-          <Image
-            src="/HOMEPAGE.png"
-            alt="Landing hero"
-            layout="fill"
-            objectFit="cover"
-            priority={true}
-          />
-        </div>
-        <div className="relative z-10 text-center p-6 max-w-2xl">
-          <h1 className="text-5xl font-extrabold mb-4 drop-shadow-lg">
-            Welcome to the Central Hub
+    <div className="min-h-screen bg-gray-900 text-white antialiased relative">
+      <Head>
+        <title>HUB ALL PROJECT</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      {/* Hero Section – Full‑screen blurred military smoke background */}
+      <section className="relative flex items-center justify-center h-screen">
+        <Image
+          src="/military-smoke.jpg"
+          alt="Military smoke background"
+          fill
+          className="object-cover filter blur-sm opacity-70"
+          priority
+        />
+        {/* Dark charcoal overlay */}
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="relative z-10 text-center max-w-xl px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide">
+            HUB ALL PROJECT
           </h1>
-          <p className="text-lg mb-6 drop-shadow-md">
-            Access all your integrated tools from one sleek, premium interface.
+          <p className="text-lg md:text-xl mb-8">
+            Experience a unified, premium gateway to all your tools.
           </p>
           <a
             href="#apps"
-            className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-6 rounded-full transition-colors"
+            className="inline-block bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-md transition-colors"
           >
-            Explore Apps
+            ENTER SYSTEM
           </a>
         </div>
       </section>
 
-      {/* Apps Grid */}
-      <section id="apps" className="py-12 px-4 md:px-8 lg:px-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Applications</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {apps.map(app => (
+      {/* Applications Grid */}
+      <section id="apps" className="py-16 px-4 md:px-8 lg:px-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Applications
+        </h2>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {apps.map((app) => (
             <div
               key={app.id}
-              className="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 cursor-pointer transform hover:scale-105 transition-transform"
+              className="border border-gray-700 rounded-xl p-6 text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-800"
               onClick={() => handleAppClick(app)}
             >
-              <div className="text-2xl font-semibold mb-2">{app.name}</div>
-              {credentials[app.id] && (
-                <div className="text-sm text-indigo-400 mb-2">Password protected</div>
-              )}
+              <h3 className="text-xl font-semibold mb-3">{app.name}</h3>
               <button
-                className="mt-3 inline-block bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium py-2 px-4 rounded"
-                onClick={(e) => { e.stopPropagation(); handleAppClick(app); }}
+                className="mt-2 inline-block bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium py-2 px-4 rounded"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleAppClick(app);
+                }}
               >
                 Open
               </button>
@@ -91,6 +95,40 @@ export default function LandingHub() {
           ))}
         </div>
       </section>
+
+      {/* ARTY Credential Modal */}
+      {artyModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-gray-800 rounded-lg p-6 w-11/12 max-w-md">
+            <h3 className="text-xl font-bold mb-4 text-center">Enter ARTY Credential</h3>
+            <form onSubmit={handleArtySubmit} className="space-y-4">
+              <input
+                type="password"
+                placeholder="Password"
+                value={artyPassword}
+                onChange={(e) => setArtyPassword(e.target.value)}
+                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none"
+                required
+              />
+              <div className="flex justify-end space-x-2">
+                <button
+                  type="button"
+                  onClick={() => setArtyModalOpen(false)}
+                  className="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
