@@ -1,4 +1,4 @@
-import { BrainCircuit, AlertTriangle, Navigation, Map as MapIcon, ChevronRight, Box, ExternalLink, Github, MessageSquare, BarChart2, CreditCard, PenTool } from 'lucide-react';
+import { BrainCircuit, AlertTriangle, Navigation, Map as MapIcon, ChevronRight, Box, ExternalLink, Code, MessageSquare, BarChart2, CreditCard, PenTool } from 'lucide-react';
 
 export default function LeftPanel() {
   return (
@@ -48,28 +48,28 @@ export default function LeftPanel() {
         </div>
 
         <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-2">
-          {/* 1. ARTY */}
-          <a href="https://lithos-hero-theta.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-sci-cyan hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan group/link">
+          {/* 1. ARTY (Pending) */}
+          <div className="flex items-center justify-between p-3 rounded-lg bg-black border border-gray-800 opacity-60">
             <div className="flex items-center gap-3">
-              <div className="bg-sci-cyan/10 p-1.5 rounded text-sci-cyan"><Box size={16} aria-hidden="true" /></div>
-              <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">ARTY</span>
+              <div className="bg-gray-700 p-1.5 rounded text-gray-400"><Box size={16} aria-hidden="true" /></div>
+              <span className="text-sm font-bold text-gray-500">ARTY</span>
             </div>
-            <ExternalLink size={14} className="text-gray-500 group-hover/link:text-sci-cyan transition-colors" aria-hidden="true" />
-          </a>
+            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not Created</span>
+          </div>
 
           {/* 2. DIGITAL EVIDENCE */}
-          <a href="https://github.com/palaside/DIGITAL-EVIDENCE.git" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
+          <a href="https://digital-evidence-czhjg1fel-palaside-2318s-projects.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
             <div className="flex items-center gap-3">
-              <div className="bg-neon-green/10 p-1.5 rounded text-neon-green"><Github size={16} aria-hidden="true" /></div>
+              <div className="bg-neon-green/10 p-1.5 rounded text-neon-green"><Code size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">DIGITAL EVIDENCE</span>
             </div>
             <ExternalLink size={14} className="text-gray-500 group-hover/link:text-neon-green transition-colors" aria-hidden="true" />
           </a>
 
           {/* 3. AI Engineering */}
-          <a href="https://github.com/palaside/BRAINSTROM-IDE.git" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
+          <a href="https://brainstrom-3msb84a55-palaside-2318s-projects.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
             <div className="flex items-center gap-3">
-              <div className="bg-neon-green/10 p-1.5 rounded text-neon-green"><Github size={16} aria-hidden="true" /></div>
+              <div className="bg-neon-green/10 p-1.5 rounded text-neon-green"><Code size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">AI Engineering Stack</span>
             </div>
             <ExternalLink size={14} className="text-gray-500 group-hover/link:text-neon-green transition-colors" aria-hidden="true" />
