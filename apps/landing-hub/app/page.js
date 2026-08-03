@@ -35,7 +35,7 @@ export default function LandingHub() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white antialiased relative">
+    <div className="min-h-screen bg-neutral-950 text-white font-sans antialiased relative">
       <Head>
         <title>HUB ALL PROJECT</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
