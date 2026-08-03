@@ -35,7 +35,7 @@ export default function LandingHub() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-neutral-950 text-neutral-100 flex flex-col items-center justify-start px-6 py-12 md:px-12">
+    <div className="min-h-screen w-full bg-neutral-950 text-neutral-100 flex flex-col items-center justify-start px-6 py-12">
       <Head>
         <title>HUB ALL PROJECT</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
