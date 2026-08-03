@@ -1,8 +1,8 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'HUB ALL PROJECT',
-  description: 'Premium hub for all tools',
+  title: "HUB ALL PROJECT",
+  description: "Premium hub for all tools",
 };
 
 export default function RootLayout({ children }) {
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-gray-900 text-white antialiased">
+      <body className="bg-neutral-950 text-neutral-100 min-h-screen antialiased selection:bg-white/20">
         {children}
       </body>
     </html>
