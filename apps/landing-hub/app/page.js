@@ -21,29 +21,38 @@ export default function LandingHub() {
           </h1>
           
           {/* Breadcrumbs / Filters */}
-          <div className="hidden md:flex items-center space-x-2 text-sm text-gray-400">
-            <Globe size={16} className="text-neon-green" />
-            <span className="hover:text-white cursor-pointer transition-colors">Japan</span>
-            <span>/</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Tokyo</span>
-            <span>/</span>
-            <MapPin size={16} className="text-neon-green" />
-            <span className="text-white font-semibold">Shinjuku</span>
-          </div>
+          <nav aria-label="Breadcrumb" className="hidden md:flex items-center space-x-2 text-sm text-gray-400">
+            <Globe size={16} className="text-neon-green" aria-hidden="true" />
+            <a href="#japan" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan rounded px-1">Japan</a>
+            <span aria-hidden="true">/</span>
+            <a href="#tokyo" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan rounded px-1">Tokyo</a>
+            <span aria-hidden="true">/</span>
+            <MapPin size={16} className="text-neon-green" aria-hidden="true" />
+            <span className="text-white font-semibold" aria-current="page">Shinjuku</span>
+          </nav>
         </div>
 
         <div className="flex items-center space-x-4">
-          <div className="relative hidden md:block">
-            <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <form className="relative hidden md:block" onSubmit={(e) => e.preventDefault()}>
+            <label htmlFor="search-input" className="sr-only">Search command</label>
+            <Search size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" aria-hidden="true" />
             <input 
-              type="text" 
-              placeholder="Search command..." 
-              className="bg-black border border-gray-700 text-sm rounded-full pl-10 pr-4 py-1.5 focus:outline-none focus:border-sci-cyan focus:ring-1 focus:ring-sci-cyan transition-all text-white w-64"
+              id="search-input"
+              name="search"
+              type="search" 
+              autoComplete="off"
+              spellCheck={false}
+              placeholder="Search command…" 
+              className="bg-black border border-gray-700 text-sm rounded-full pl-10 pr-4 py-1.5 focus-visible:outline-none focus-visible:border-sci-cyan focus-visible:ring-1 focus-visible:ring-sci-cyan transition-all text-white w-64"
             />
-          </div>
-          <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center border border-gray-600 cursor-pointer hover:border-sci-cyan transition-colors">
-            <User size={16} className="text-gray-300" />
-          </div>
+          </form>
+          <button 
+            type="button"
+            aria-label="User Profile"
+            className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center border border-gray-600 hover:border-sci-cyan transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-hub-panel"
+          >
+            <User size={16} className="text-gray-300" aria-hidden="true" />
+          </button>
         </div>
       </header>
 
