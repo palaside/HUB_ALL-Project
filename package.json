@@ -1,0 +1,10 @@
+{
+  "name": "hub-all-project",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace landing-hub",
+    "build": "npm run build --workspace landing-hub",
+    "start": "npm run start --workspace landing-hub"
+  }
+}
