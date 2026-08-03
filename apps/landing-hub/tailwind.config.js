@@ -8,7 +8,16 @@ module.exports = {
     "../../apps/landing-hub/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'neon-green': '#39FF14',
+        'sci-cyan': '#00FFFF',
+        'crimson-red': '#DC143C',
+        'hazard-orange': '#FF4500',
+        'hub-dark': '#0a0a0a',
+        'hub-panel': '#111111',
+      }
+    },
   },
   plugins: [],
 };
