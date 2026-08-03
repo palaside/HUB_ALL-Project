@@ -41,37 +41,39 @@ export default function LandingHub() {
   };
 
   return (
-    <div style={recoveryStyle} className="min-h-screen w-full bg-neutral-950 text-neutral-100 flex flex-col font-sans">
+    <div style={recoveryStyle} className="min-h-screen w-full bg-neutral-950 text-neutral-100 flex flex-col lg:flex-row font-sans">
       <Head>
         <title>HUB ALL PROJECT</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* Hero Section – Full‑screen blurred military smoke background */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center px-4">
+      {/* Hero Section – Left side on Desktop, Top on Mobile */}
+      <section className="relative w-full lg:w-5/12 h-[50vh] lg:h-screen flex flex-col items-center justify-center p-8 lg:p-12 overflow-hidden border-b lg:border-b-0 lg:border-r border-gray-800 shrink-0">
         {/* Check if image exists, otherwise fallback to dark bg */}
         <div className="absolute inset-0 bg-neutral-900" />
         <Image src="/military-smoke.jpg" alt="Military smoke background" fill className="object-cover filter blur-sm opacity-50 mix-blend-overlay" priority unoptimized />
         {/* Dark charcoal overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-neutral-950" />
         
-        <div className="relative z-10 text-center max-w-3xl mx-auto mt-[-10vh]">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white drop-shadow-lg">HUB ALL PROJECT</h1>
-          <p className="text-lg md:text-2xl mb-10 text-gray-300 font-medium">Experience a unified, premium gateway to all your tools.</p>
-          <a href="#apps" className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-10 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(79,70,229,0.5)]">
+        <div className="relative z-10 text-center max-w-lg mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight text-white drop-shadow-lg leading-tight">HUB ALL PROJECT</h1>
+          <p className="text-base md:text-lg lg:text-xl mb-8 text-gray-300 font-medium">Experience a unified, premium gateway to all your tools.</p>
+          <a href="#apps" className="lg:hidden inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-[0_0_15px_rgba(79,70,229,0.5)]">
             ENTER SYSTEM
           </a>
         </div>
       </section>
 
-      {/* Applications Grid */}
-      <section id="apps" className="w-full py-24 px-6 md:px-12 lg:px-24 bg-neutral-950 flex-grow">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-white">Applications</h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      {/* Applications Grid – Right side on Desktop, Bottom on Mobile */}
+      <section id="apps" className="w-full lg:w-7/12 py-12 px-6 md:px-12 lg:px-16 bg-neutral-950 flex-grow lg:h-screen lg:overflow-y-auto custom-scrollbar">
+        <h2 className="text-3xl lg:text-4xl font-extrabold text-center lg:text-left mb-10 tracking-tight text-white">Applications</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-12">
           {apps.map((app) => (
-            <div key={app.id} className="group relative border border-gray-800 rounded-2xl p-8 text-center hover:bg-gray-800/80 transition-all duration-300 cursor-pointer bg-gray-900/50 hover:border-indigo-500/50 hover:shadow-xl hover:-translate-y-1" onClick={() => handleAppClick(app)}>
-              <h3 className="text-xl font-bold mb-6 text-gray-100 group-hover:text-indigo-400 transition-colors">{app.name}</h3>
-              <button className="inline-block w-full bg-gray-800 group-hover:bg-indigo-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-colors" onClick={(e) => { e.stopPropagation(); handleAppClick(app); }}>
+            <div key={app.id} className="group relative border border-gray-800 rounded-2xl p-6 text-center hover:bg-gray-800/80 transition-all duration-300 cursor-pointer bg-gray-900/50 hover:border-indigo-500/50 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between h-48" onClick={() => handleAppClick(app)}>
+              <div className="flex flex-col items-center justify-center flex-grow">
+                <h3 className="text-lg font-bold mb-2 text-gray-100 group-hover:text-indigo-400 transition-colors">{app.name}</h3>
+              </div>
+              <button className="inline-block w-full bg-gray-800 group-hover:bg-indigo-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-colors mt-4" onClick={(e) => { e.stopPropagation(); handleAppClick(app); }}>
                 Open App
               </button>
             </div>
