@@ -10,7 +10,7 @@ export default function CenterPanel() {
     <>
       <div className="flex items-center space-x-2 mb-2 shrink-0">
         <Activity className="text-neon-green" size={20} aria-hidden="true" />
-        <h2 className="text-lg font-bold text-white tracking-wide uppercase">City Pulse : Shinjuku</h2>
+        <h2 className="text-lg font-bold text-white tracking-wide uppercase">City pulse: Shinjuku</h2>
       </div>
 
       {/* 3D Map View Mockup */}
@@ -29,13 +29,13 @@ export default function CenterPanel() {
               <MapPin size={24} className="text-white" aria-hidden="true" />
             </div>
           </div>
-          <div className="mt-2 bg-black/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full border border-crimson-red/50 shadow-[0_0_10px_rgba(220,20,60,0.5)]">
-            INCIDENT: YASUKUNI-DORI
+          <div className="mt-2 bg-black/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full border border-crimson-red/50 shadow-[0_0_10px_rgba(220,20,60,0.5)] uppercase">
+            Incident: Yasukuni-dori
           </div>
         </div>
         
         <div className="absolute bottom-4 left-4 bg-gray-900/80 backdrop-blur p-2 rounded border border-gray-700">
-          <p className="text-xs text-gray-400 font-mono">DIGITAL TWIN: ACTIVE</p>
+          <p className="text-xs text-gray-400 font-mono uppercase">Digital twin: Active</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ export default function CenterPanel() {
         {/* Traffic Flow */}
         <div className="bg-hub-panel border border-gray-800 rounded-xl p-4 flex flex-col justify-between hover:border-gray-600 transition-colors">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Traffic Flow</h3>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Traffic flow</h3>
             <span className="text-xs font-bold text-crimson-red bg-crimson-red/10 px-2 py-0.5 rounded tabular-nums">+9% vs base</span>
           </div>
           <div className="h-16 w-full mt-2" aria-hidden="true">
@@ -62,7 +62,7 @@ export default function CenterPanel() {
         <div className="bg-hub-panel border border-gray-800 rounded-xl p-4 flex flex-col justify-between hover:border-gray-600 transition-colors">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1">
-              <Wind size={14} aria-hidden="true" /> Air Quality
+              <Wind size={14} aria-hidden="true" /> Air quality
             </h3>
             <span className="text-xs font-bold text-sci-cyan bg-sci-cyan/10 px-2 py-0.5 rounded tabular-nums">AQI 62</span>
           </div>
@@ -80,7 +80,7 @@ export default function CenterPanel() {
         <div className="bg-hub-panel border border-gray-800 rounded-xl p-4 flex flex-col justify-between hover:border-gray-600 transition-colors">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1">
-              <Train size={14} aria-hidden="true" /> Transit Status
+              <Train size={14} aria-hidden="true" /> Transit status
             </h3>
             <span className="text-xs font-bold text-hazard-orange bg-hazard-orange/10 px-2 py-0.5 rounded tabular-nums">+5 min</span>
           </div>

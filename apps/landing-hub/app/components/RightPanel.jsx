@@ -8,7 +8,7 @@ export default function RightPanel() {
     <>
       <div className="flex items-center space-x-2 mb-2 shrink-0">
         <ShieldAlert className="text-hazard-orange" size={20} aria-hidden="true" />
-        <h2 className="text-lg font-bold text-white tracking-wide uppercase">Alerts & Response</h2>
+        <h2 className="text-lg font-bold text-white tracking-wide uppercase">Alerts and response</h2>
       </div>
 
       {/* Alert Toggles */}
@@ -32,25 +32,25 @@ export default function RightPanel() {
               <Car size={20} className="text-crimson-red" aria-hidden="true" />
             </div>
             <div>
-              <h3 className="text-white font-bold text-sm">Roadworks Obstruction</h3>
-              <p className="text-gray-400 text-xs mt-1 tabular-nums">Shinjuku-dori Ave. • 2 Lanes Blocked</p>
+              <h3 className="text-white font-bold text-sm">Roadworks obstruction</h3>
+              <p className="text-gray-400 text-xs mt-1 tabular-nums">Shinjuku-dori Ave. • 2 lanes blocked</p>
             </div>
           </div>
           <span className="text-xs text-crimson-red font-mono font-bold tabular-nums">12:04 PM</span>
         </div>
         
         <p className="text-gray-300 text-xs mb-4 leading-relaxed tabular-nums">
-          Unscheduled maintenance causing severe bottleneck. AI predicts total gridlock in 15 mins if unresolved.
+          Unscheduled maintenance caused a severe bottleneck. Gridlock occurs in 15 minutes unless resolved.
         </p>
 
         <div className="flex space-x-2 mt-auto">
           <button type="button" className="flex-1 bg-crimson-red hover:bg-red-600 text-white font-bold py-2 px-3 rounded text-xs flex items-center justify-center space-x-1 transition-all hover:shadow-[0_0_10px_rgba(220,20,60,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
             <Zap size={14} aria-hidden="true" />
-            <span>OPTIMIZE</span>
+            <span>Optimize</span>
           </button>
           <button type="button" className="flex-1 bg-gray-800 hover:bg-gray-700 border border-gray-600 text-gray-200 font-bold py-2 px-3 rounded text-xs flex items-center justify-center space-x-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan">
             <Map size={14} aria-hidden="true" />
-            <span>VIEW IN MAP</span>
+            <span>View in map</span>
           </button>
         </div>
       </div>
@@ -63,8 +63,8 @@ export default function RightPanel() {
               <AlertTriangle size={20} className="text-hazard-orange" aria-hidden="true" />
             </div>
             <div>
-              <h3 className="text-white font-bold text-sm">Elevated AQI Warning</h3>
-              <p className="text-gray-400 text-xs mt-1">Kabukicho Sector • Industrial Emission</p>
+              <h3 className="text-white font-bold text-sm">Elevated AQI warning</h3>
+              <p className="text-gray-400 text-xs mt-1">Kabukicho Sector • Industrial emission</p>
             </div>
           </div>
         </div>
@@ -73,10 +73,10 @@ export default function RightPanel() {
       {/* Task Backlog Tracker */}
       <div className="bg-hub-panel border border-gray-800 rounded-xl p-5 shadow-lg flex-1 flex flex-col group hover:border-gray-600 transition-colors">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider tabular-nums">7-Day Response</h3>
+          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider tabular-nums">7-day response</h3>
           <div className="flex items-center space-x-1 bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs border border-gray-700">
             <CheckCircle2 size={12} className="text-neon-green" aria-hidden="true" />
-            <span className="tabular-nums">128 PENDING</span>
+            <span className="tabular-nums">128 pending</span>
           </div>
         </div>
         

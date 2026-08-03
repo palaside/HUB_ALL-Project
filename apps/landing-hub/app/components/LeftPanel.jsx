@@ -5,7 +5,7 @@ export default function LeftPanel() {
     <>
       <div className="flex items-center space-x-2 mb-2 shrink-0">
         <BrainCircuit className="text-sci-cyan" size={20} aria-hidden="true" />
-        <h2 className="text-lg font-bold text-white tracking-wide uppercase">AI Ops & Routing</h2>
+        <h2 className="text-lg font-bold text-white tracking-wide uppercase">AI ops and routing</h2>
       </div>
 
       {/* AI Situation Brief */}
@@ -15,9 +15,9 @@ export default function LeftPanel() {
         </div>
         <div className="flex items-start justify-between relative z-10 mb-4">
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Situation Brief</h3>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-1">Situation brief</h3>
             <p className="text-white font-medium text-lg leading-snug">
-              Traffic congestion detected on Yasukuni-dori due to roadworks.
+              Roadworks caused traffic congestion on Yasukuni-dori.
             </p>
           </div>
           <div className="bg-crimson-red/20 text-crimson-red px-2 py-1 rounded-md flex items-center space-x-1 shrink-0 ml-4 border border-crimson-red/30">
@@ -30,7 +30,7 @@ export default function LeftPanel() {
           type="button"
           className="w-full bg-gray-800 hover:bg-sci-cyan hover:text-black text-sci-cyan font-bold py-3 px-4 rounded-lg flex items-center justify-between transition-all group-hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] border border-sci-cyan/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-hub-panel"
         >
-          <span>Open AI Ops Console</span>
+          <span>Open AI ops console</span>
           <ChevronRight size={18} className="transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </button>
       </div>
@@ -40,10 +40,10 @@ export default function LeftPanel() {
         <div className="flex items-center justify-between mb-4 shrink-0">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-2">
             <Navigation size={16} className="text-neon-green" aria-hidden="true" />
-            Connected Systems
+            Connected systems
           </h3>
           <span className="text-xs bg-neon-green/20 text-neon-green px-2 py-1 rounded border border-neon-green/30 font-mono tabular-nums">
-            7 APPS
+            7 apps
           </span>
         </div>
 
@@ -54,7 +54,7 @@ export default function LeftPanel() {
               <div className="bg-gray-700 p-1.5 rounded text-gray-400"><Box size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-500">ARTY</span>
             </div>
-            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not Created</span>
+            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not created</span>
           </div>
 
           {/* 2. DIGITAL EVIDENCE */}
@@ -99,7 +99,7 @@ export default function LeftPanel() {
               <div className="bg-gray-700 p-1.5 rounded text-gray-400"><CreditCard size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-500">POS</span>
             </div>
-            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not Created</span>
+            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not created</span>
           </div>
 
           {/* 6. Design (Pending) */}
@@ -108,7 +108,7 @@ export default function LeftPanel() {
               <div className="bg-gray-700 p-1.5 rounded text-gray-400"><PenTool size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-500">Design</span>
             </div>
-            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not Created</span>
+            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not created</span>
           </div>
 
         </div>
