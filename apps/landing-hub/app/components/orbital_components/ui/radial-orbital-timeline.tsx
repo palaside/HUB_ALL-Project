@@ -8,7 +8,7 @@ import { Badge } from "./badge";
 import { Button } from "./button";
 import { Card, CardContent, CardHeader, CardTitle } from "./card";
 import { TargetingUI } from "./animated-hud-targeting-ui";
-import { cn } from "../../../lib/utils";
+import { cn } from "@/lib/utils";
 
 export interface TimelineItem {
   id: number;
