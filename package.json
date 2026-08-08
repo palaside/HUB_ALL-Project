@@ -1,7 +1,7 @@
 {
   "name": "hub-all-project",
   "private": true,
-  "workspaces": ["apps/*"],
+  "workspaces": ["apps/*", "apps/*/*"],
   "scripts": {
     "dev": "npm run dev --workspace landing-hub",
     "build": "npm run build --workspace landing-hub",
