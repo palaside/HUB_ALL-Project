@@ -1,0 +1,3 @@
+[submodule "apps/BRAINSTROM-IDE"]
+	path = apps/BRAINSTROM-IDE
+	url = https://github.com/palaside/BRAINSTROM-IDE.git
