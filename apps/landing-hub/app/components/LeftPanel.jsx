@@ -67,7 +67,7 @@ export default function LeftPanel() {
           </a>
 
           {/* 3. AI Engineering */}
-          <a href="https://brainstrom-ide.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
+          <a href="https://brainstrom-ide-palaside-2318s-projects.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neon-green hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-green group/link">
             <div className="flex items-center gap-3">
               <div className="bg-neon-green/10 p-1.5 rounded text-neon-green"><Code size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">AI Engineering Stack</span>
