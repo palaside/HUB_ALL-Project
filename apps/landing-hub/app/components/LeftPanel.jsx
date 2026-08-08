@@ -76,7 +76,7 @@ export default function LeftPanel() {
           </a>
 
           {/* 4. Prompt Architect 360 */}
-          <a href="https://prompt-360-degree.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-sci-cyan hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan group/link">
+          <a href="https://design-architecture-generator.vercel.app/" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-sci-cyan hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan group/link">
             <div className="flex items-center gap-3">
               <div className="bg-sci-cyan/10 p-1.5 rounded text-sci-cyan"><MessageSquare size={16} aria-hidden="true" /></div>
               <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">Prompt Architect 360</span>
