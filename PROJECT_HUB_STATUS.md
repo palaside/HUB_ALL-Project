@@ -1,6 +1,6 @@
 # PROJECT_HUB_STATUS
 
-**Last Updated:** 2026-08-04
+**Last Updated:** 2026-08-10
 **Project Name:** HUB ALL PROJECT (Landing Hub)
 
 ## 1. Overview
@@ -29,6 +29,7 @@ The following systems are integrated into the Left Panel (`Connected systems`) o
 - **Code Cleanup:** Unused mock directories (`app/admin`, `app/api`, `app/arty`) have been completely removed to eliminate technical debt.
 - **Next.js Config:** Resolved Turbopack build warnings by removing deprecated `swcMinify` and `eslint` keys in `next.config.js`.
 - **Environment Variables:** Currently, there are **NO** `.env` or `.env.local` files present or required, as the dashboard uses mock telemetry data.
+- **New Agent Skills:** Added `system-chat-processing` skill for chat image forensic integrity.
 
 ## 5. UI/UX & Writing Guidelines
 - Interface components (`LeftPanel.jsx`, `CenterPanel.jsx`, `RightPanel.jsx`) have been refactored for **Vercel Writing Guidelines** compliance:
