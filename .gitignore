@@ -2,3 +2,6 @@
 .code-review-graph/
 node_modules/
 .next/
+
+.vercel
+.env*
