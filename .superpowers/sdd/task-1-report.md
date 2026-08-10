@@ -2,6 +2,7 @@
 
 OBSERVED
 - Active repository/worktree: `D:\Project\HUB` on branch `publish-hub-updates`.
+- The application files in scope are owned by a nested Git repository at `D:\Project\HUB\apps\DIGITAL-EVIDENCE`.
 - Approved task contract read from `D:\Project\HUB\.superpowers\sdd\task-1-brief.md`.
 - Scope-limited files from the brief:
   - `apps/DIGITAL-EVIDENCE/Create Single Page Website/src/app/App.tsx`
@@ -11,7 +12,7 @@ OBSERVED
 
 UNKNOWN
 - No visual regression baseline or screenshot approval flow was provided in the brief.
-- The Git checkout currently reports the app tree as untracked, so normal tracked-file diff history is not available from `git diff`.
+- The brief requested work on branch `publish-hub-updates`, but the nested `apps/DIGITAL-EVIDENCE` repository is currently on branch `main`.
 
 IMPLEMENTATION BASIS
 - Task 1 required a simpler first-run shell with a clearer workflow hierarchy while preserving existing chat/slip processing and keeping the SPA single-page.
@@ -83,6 +84,9 @@ COMMANDS_EXECUTED
 - `npm.cmd run typecheck` (passed)
 - `git status --short`
 - `git ls-files -- 'apps/DIGITAL-EVIDENCE/Create Single Page Website/src/app/App.tsx' 'apps/DIGITAL-EVIDENCE/Create Single Page Website/src/app/components/Header.tsx' '.superpowers/sdd/task-1-report.md'`
+- `git -c safe.directory='D:/Project/HUB/apps/DIGITAL-EVIDENCE' -C 'D:\Project\HUB\apps\DIGITAL-EVIDENCE' status --short -- 'Create Single Page Website/src/app/App.tsx' 'Create Single Page Website/src/app/components/Header.tsx'`
+- `git -c safe.directory='D:/Project/HUB/apps/DIGITAL-EVIDENCE' -C 'D:\Project\HUB\apps\DIGITAL-EVIDENCE' add -- 'Create Single Page Website/src/app/App.tsx' 'Create Single Page Website/src/app/components/Header.tsx'`
+- `git -c safe.directory='D:/Project/HUB/apps/DIGITAL-EVIDENCE' -C 'D:\Project\HUB\apps\DIGITAL-EVIDENCE' commit -m "Reframe digital evidence dashboard hierarchy"`
 
 TEST_RESULTS
 - No new automated tests added. The brief required shell-mount verification through TypeScript type-checking only.
@@ -105,7 +109,7 @@ ACCEPTANCE_CRITERIA
 - Required type-check verification passes: met.
 
 UNRESOLVED_ISSUES
-- None blocking Task 1.
+- The source-code commit was created in the nested `apps/DIGITAL-EVIDENCE` repository on branch `main` because that repo owns the application files.
 
 SCOPE_DEVIATIONS
 - None.
