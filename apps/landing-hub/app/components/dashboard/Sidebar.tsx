@@ -117,7 +117,7 @@ export function Sidebar() {
                 <button 
                   onClick={() => {
                     setIsProgramMenuOpen(false);
-                    window.location.href = "/dashboard/3"; // Group 2
+                    window.open("https://digital-evidence-spa.vercel.app", "_blank");
                   }}
                   className="flex items-center gap-3 w-full p-3 rounded-lg hover:bg-emerald-900/30 text-left transition-colors group"
                 >
