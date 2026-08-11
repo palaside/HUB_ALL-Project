@@ -103,14 +103,14 @@ export default function LeftPanel() {
             <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not created</span>
           </div>
 
-          {/* 6. Design (Pending) */}
-          <div className="flex items-center justify-between p-3 rounded-lg bg-black border border-gray-800 opacity-60">
+          {/* 6. Design (Active) */}
+          <a href="https://palaside-design-app.vercel.app" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-sci-cyan hover:bg-gray-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sci-cyan group/link">
             <div className="flex items-center gap-3">
-              <div className="bg-gray-700 p-1.5 rounded text-gray-400"><PenTool size={16} aria-hidden="true" /></div>
-              <span className="text-sm font-bold text-gray-500">Design</span>
+              <div className="bg-sci-cyan/10 p-1.5 rounded text-sci-cyan"><PenTool size={16} aria-hidden="true" /></div>
+              <span className="text-sm font-bold text-gray-200 group-hover/link:text-white transition-colors">Design</span>
             </div>
-            <span className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded font-mono uppercase">Not created</span>
-          </div>
+            <ExternalLink size={14} className="text-gray-500 group-hover/link:text-sci-cyan transition-colors" aria-hidden="true" />
+          </a>
 
         </div>
       </div>

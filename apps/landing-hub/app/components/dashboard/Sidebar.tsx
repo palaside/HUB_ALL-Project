@@ -145,6 +145,22 @@ export function Sidebar() {
                     <div className="text-[10px] text-slate-400">รันรายงานรอง (e-Slip)</div>
                   </div>
                 </button>
+
+                <button 
+                  onClick={() => {
+                    setIsProgramMenuOpen(false);
+                    window.open("https://palaside-design-app.vercel.app", "_blank");
+                  }}
+                  className="flex items-center gap-3 w-full p-3 rounded-lg hover:bg-emerald-900/30 text-left transition-colors group"
+                >
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center group-hover:bg-emerald-500/20 group-hover:border-emerald-400 transition-colors">
+                    <PencilRuler className="w-4 h-4 text-emerald-400" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">3. Design</div>
+                    <div className="text-[10px] text-slate-400">ระบบสร้างออกแบบแอปและไดอะแกรม DESIGN</div>
+                  </div>
+                </button>
               </div>
             </div>
           )}
