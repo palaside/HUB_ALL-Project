@@ -5,6 +5,7 @@
 export interface LayoutArchitecture {
   id: string;
   name: string;
+  nameLocal?: string;
   category: 'classical' | 'modern' | 'editorial' | 'experimental' | 'digital';
   era: string;
   origin: string;
@@ -15,6 +16,32 @@ export interface LayoutArchitecture {
 }
 
 export const allLayouts: LayoutArchitecture[] = [
+  // ============================================
+  // SINGLE COLUMN (FUNDAMENTAL)
+  // ============================================
+  {
+    id: 'single-column',
+    name: 'Single Column Layout',
+    nameLocal: 'เลย์เอาต์คอลัมน์เดียว',
+    category: 'digital',
+    era: 'Fundamental Web',
+    origin: 'Responsive Web Design',
+    description: 'The simplest and most mobile-friendly layout: content stacks vertically in a single column. Perfect for mobile-first design, landing pages, articles, and linear storytelling.',
+    characteristics: ['Mobile-first', 'Vertical stacking', 'Linear reading flow', 'Simplest structure'],
+    gridStructure: 'grid-cols-1 max-w-3xl mx-auto',
+    cssTemplate: `/* Single Column Layout */
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}`,
+  },
+
   // ============================================
   // CLASSICAL & TRADITIONAL LAYOUTS
   // ============================================

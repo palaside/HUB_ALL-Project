@@ -214,3 +214,4 @@ export {
 export { StyleCustomizer } from './StyleCustomizer';
 export { LayoutGallery } from './LayoutGallery';
 export { MotionGallery } from './MotionGallery';
+export { DashboardGallery } from './DashboardGallery';

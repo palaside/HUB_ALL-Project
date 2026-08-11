@@ -2,7 +2,7 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 
 const databaseUrl =
-  process.env.DATABASE_URL || "postgres://postgres:postgres@localhost:5432/design_db";
+  process.env.DATABASE_URL || "https://ehflrcobmpifvisnnpjg.supabase.co";
 
 const globalForDb = globalThis as typeof globalThis & {
   __arenaNextJsPostgresqlPool?: Pool;

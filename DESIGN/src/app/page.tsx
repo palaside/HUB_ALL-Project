@@ -111,6 +111,7 @@ import {
   HelpCircle,
   Sparkles,
   Zap,
+  LayoutDashboard,
 } from 'lucide-react';
 
 // Wrapper component for toast functionality
@@ -251,6 +252,11 @@ export default function DesignSystemShowcase() {
               <Link href="/motions">
                 <Button variant="outline" size="lg" leftIcon={<Zap size={18} />}>
                   ✨ Motion Gallery
+                </Button>
+              </Link>
+              <Link href="/dashboards">
+                <Button variant="outline" size="lg" leftIcon={<LayoutDashboard size={18} />}>
+                  📊 Dashboard Gallery
                 </Button>
               </Link>
             </div>

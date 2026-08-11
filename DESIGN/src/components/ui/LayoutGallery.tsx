@@ -62,6 +62,47 @@ export function LayoutGallery() {
   // Render preview based on selected layout structure
   const renderLayoutPreview = () => {
     switch (selectedLayout.id) {
+      case 'single-column':
+        return (
+          <div className="max-w-md mx-auto flex flex-col gap-4 min-h-[350px]">
+            <div className="bg-blue-500/10 border-2 border-blue-500/30 rounded-xl p-6 text-center">
+              <Badge variant="primary" size="sm" className="mb-2">Hero Section</Badge>
+              <h4 className="font-bold text-lg text-gray-900">Single Column Layout</h4>
+              <p className="text-xs text-gray-600 mt-1">Mobile-first, content stacks vertically in one linear flow.</p>
+              <Button size="sm" className="mt-3">Primary CTA</Button>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+              <Badge variant="secondary" size="sm" className="mb-2">Features</Badge>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">1</div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Feature One</p>
+                    <p className="text-xs text-gray-500">Description goes here</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">2</div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Feature Two</p>
+                    <p className="text-xs text-gray-500">Description goes here</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">3</div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Feature Three</p>
+                    <p className="text-xs text-gray-500">Description goes here</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-100 border border-gray-200 rounded-xl p-4 text-center">
+              <p className="text-xs text-gray-500">Footer / Contact Section</p>
+            </div>
+          </div>
+        );
+
       case 'golden-ratio':
         return (
           <div className="grid grid-cols-[1.618fr_1fr] gap-4 min-h-[350px]">
