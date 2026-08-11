@@ -36,3 +36,30 @@ Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
 2. Use `detect_changes_tool` for code review.
 3. Use `get_affected_flows_tool` to understand impact.
 4. Use `query_graph_tool` pattern="tests_for" to check coverage.
+
+---
+
+## 📱 Mobile-First Responsive Web Design Standards
+
+All UI components and layouts across all web apps in this project MUST strictly follow these rules:
+
+1. **Mobile-First Approach**:
+   - Write base styles for mobile (<576px) first.
+   - Use progressive enhancement breakpoint overrides (`sm:`, `md:`, `lg:`, `xl:`, `2xl:` in Tailwind or `@media (min-width)` in CSS) for larger screens.
+
+2. **Standard Breakpoint Reference**:
+   - **Mobile (Portrait)**: `< 576px` (Base styles)
+   - **Mobile (Landscape) / Tablet (Portrait)**: `576px - 768px` (`sm:`)
+   - **Tablet (Landscape) / Laptop**: `768px - 1024px` (`md:`)
+   - **Desktop (Standard)**: `1024px - 1440px` (`lg:`)
+   - **Ultra-Wide (Large)**: `> 1440px` (`xl:` / `2xl:`)
+
+3. **Layout & Media Constraints**:
+   - Layouts MUST use Flexbox (`flex`) or CSS Grid (`grid`). Never use hardcoded `absolute` positioning for primary content flow.
+   - Use fluid/relative sizing (`%`, `rem`, `em`, `clamp()`, `vw`, `vh`) over static `px`.
+   - Media: Always set `max-width: 100%; height: auto;` (prevent horizontal scrolling/overflow).
+
+4. **Touch-Friendly & Accessibility**:
+   - Touch targets for interactive elements (buttons, links, inputs) MUST be at least `44x44px` on mobile/tablet screens (`min-h-[44px] min-w-[44px]`).
+   - Use accessible navigation drawers/hamburger menus on mobile viewports.
+
